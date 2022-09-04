@@ -48,18 +48,42 @@ input {
   text-align: left;
   padding-left: 32px;
 
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 20px;
-  color: #B8C7ED;
-
+  font: 300 12px/20px 'Libre Franklin', sans-serif;
+  color: #15202A;
   border: 1px solid #C2D3FF;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.0001);
   border-radius: 28px;
 }
 
-.hidden {
+input::placeholder {
+  font: 300 12px/20px 'Libre Franklin', sans-serif;
+  color: #B8C7ED;
+}
+
+.err input {
+  border: 1px solid #FF5466;
+}
+
+.form p {
   display: none;
+}
+
+.form p {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  margin: 1px 0 20px;
+}
+
+.form.err .error {
+  display: block;
+  color: #FF5466;
+}
+
+.form.success .alert {
+  display: block;
+  color: #016401;
 }
 
 .btn {
