@@ -13,6 +13,10 @@ header {
   margin-top: 49px;
 }
 
+header img {
+  width: 56px;
+}
+
 main {
   text-align: center;
   margin: 0 28px;
@@ -73,7 +77,7 @@ input::placeholder {
   font-weight: 400;
   font-size: 10px;
   line-height: 20px;
-  margin: 1px 0 20px;
+  margin: 2px 0 20px;
 }
 
 .form.err .error {
@@ -127,11 +131,13 @@ footer {
 .circle:first-of-type {
   justify-self: end;
 }
+
 .circle:last-of-type {
   justify-self: start;
 }
 
 ion-icon {
+  font-size: 15px;
   color:#4C7BF3;
 }
 
@@ -142,4 +148,121 @@ footer p {
   line-height: 12px;
 
   color: #969696;
+}
+
+
+@media (min-width: 712px) {
+  header {
+    height: 119px;
+    margin-top: 40px;
+  }
+
+  header img {
+    width: 90px;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 60px;
+    margin: 0;
+  }
+
+  main > p {
+    font-size: 20px;
+    line-height: 24px;
+    color: #15202A;
+    margin: 15px 9px 32px;
+  }
+
+  .form {
+    width: 637px;
+    display: grid;
+    grid-template-columns: 421px 200px;
+    grid-template-areas:
+      "input btn"
+      "message .";
+    gap: 6px 16px;
+    margin: 0 auto;
+  }
+
+  .oval {
+    height: 56px;
+  }
+
+  input.oval {
+    width: 421px;
+    font-size: 16px;
+    grid-area: input;
+  }
+
+  input::placeholder {
+    font-size: 16px;
+  }
+
+  .form p {
+    font-size: 12px;
+    margin: 6px 0 0;
+  }
+  .err p, .success p {
+    grid-area: message;
+    justify-self: start;
+    padding-left: 32px;
+  }
+
+  .btn {
+    display: inline;
+    grid-area: btn;
+
+    width: 200px;
+    margin: 0;
+    background: #4C7BF3;
+
+    font-size: 16px;
+    line-height: 19px;
+
+    transition: all 400ms;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+
+  main img {
+    width: 640px;
+    margin-top: 94px;
+  }
+
+  footer {
+    width: 203px;
+    display: grid;
+    grid-template-columns: 70px 32px 70px;
+
+    margin: 72px auto 49px;
+  }
+
+  .circle {
+    transition: all 400ms;
+    cursor: pointer;
+  }
+
+  .circle:hover {
+    background: #4C7BF3;
+  }
+
+  ion-icon {
+    transition: all 400ms;
+  }
+  .circle:hover ion-icon {
+    color: #FFF;
+  }
+
+  footer p {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
