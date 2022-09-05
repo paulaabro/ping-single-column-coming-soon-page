@@ -4,16 +4,6 @@ function isEmailValid(email) {
   return !!result;
 }
 
-function toogleClass(cls, time) {
-  form.classList.add(cls);
-  setTimeout(() => {
-    if (form.classList.contains(cls)) {
-    form.classList.remove(cls);
-    }
-  }, time);
-}
-
-
 function handleForm() {
   const email = input.value;
   if (isEmailValid(email)) {
@@ -21,12 +11,12 @@ function handleForm() {
       form.classList.remove('err');
     }
     input.value = '';
-    toogleClass('success', 3000);
+    form.classList.add('success');
   } else {
     if (form.classList.contains('success')) {
       form.classList.remove('success');
     }
-    toogleClass('err', 3000)
+    form.classList.add('err');
   }
 }
 
